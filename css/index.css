@@ -61,6 +61,8 @@ p {
 
 .menu {
   position: relative;
+  max-width: 1080px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -75,10 +77,6 @@ p {
 
 .menu li.menuItem a {
   padding: 0.5em;
-}
-
-.menu li.menuItem:last-child {
-  margin-right: 100px;
 }
 
 .menu li.menuItem a:hover {
@@ -120,17 +118,9 @@ footer ul li p {
   margin: auto;
   background: url("../images/portfolio.svg");
   background-size: 100% 100%;
-  -webkit-transition: 3s ease-in-out;
-  transition: 3s ease-in-out;
-}
-
-.hero .logo:hover {
-  background: url("../images/portfolio-white.svg");
-  background-size: 100% 100%;
 }
 
 .hero .heroContent {
-  width: 80%;
   margin: 0px auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -258,6 +248,7 @@ footer ul li p {
 
 @media (min-width: 600px) {
   .hero {
+    width: 100%;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -290,11 +281,10 @@ footer ul li p {
     gap: 30px;
   }
   .holder {
-    margin-top: 30px;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
 }
 /*# sourceMappingURL=index.css.map */

@@ -54,16 +54,16 @@ p {
 
 .menu {
   position: relative;
+  max-width: 1080px;
+  width: 100%;
   display: flex;
   justify-content: flex-end;
   li:last-child {
     margin-left: 100px;
   }
+
   li.menuItem a {
     padding: 0.5em;
-  }
-  li.menuItem:last-child {
-    margin-right: 100px;
   }
 
   li.menuItem a:hover {
@@ -99,14 +99,8 @@ footer {
     margin: auto;
     background: url("../images/portfolio.svg");
     background-size: 100% 100%;
-    transition: 3s ease-in-out;
-  }
-  .logo:hover {
-    background: url("../images/portfolio-white.svg");
-    background-size: 100% 100%;
   }
   .heroContent {
-    width: 80%;
     margin: 0px auto;
     display: flex;
     flex-direction: column;
@@ -199,6 +193,7 @@ footer {
 }
 @media (min-width: 600px) {
   .hero {
+    width: 100%;
     flex-direction: row;
     margin-top: 150px;
   }
@@ -223,8 +218,7 @@ footer {
     gap: 30px;
   }
   .holder {
-    margin-top: 30px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr;
   }
 }
