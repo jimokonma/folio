@@ -15,9 +15,12 @@ h1 {
 ul {
   list-style: none;
 }
-a,label {
+a {
   color: #f3c623;
   text-decoration: none;
+}
+label{
+  color: #f1f1f1;
 }
 p {
   color: lightgray;
@@ -43,11 +46,7 @@ p {
   color: #f3c623;
   border: 1px solid #f3c623;
 }
-.outlineBtn:hover {
-  color: #ffffff;
-  box-shadow: inset 300px 0 0 0 #10375c;
 
-}
 .container {
   width: 100%;
   min-height: 100vh;
@@ -85,19 +84,7 @@ padding: 20px 0px;
   }
 }
 
-form{
-  display: flex;
-  flex-direction: column;
-  input{
-    border: none;
-    height: 30px;
-    margin: 5px 0px;
-  }
-  textarea{
-    border: none;
 
-  }
-}
 
 footer {
   text-align: center;
@@ -113,9 +100,14 @@ footer {
 .bigImg {
   width: 60%;
   margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   img {
     width: 100%;
     max-width: 200px;
+    margin: 10px 0px;
   }
 }
 // Home
@@ -178,6 +170,15 @@ footer {
     line-height: 30px;
     
   }
+  h5{
+    font-size: 20px;
+    color: #999999;
+    font-style: italic;
+    margin-bottom: 10px;
+    line-height: 30px;
+    text-align: justify;
+
+  }
 }
 
   .my-image {
@@ -223,12 +224,62 @@ footer {
   width: 80%;
   margin: 0px auto;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 
   img {
     width: 100px;
     margin: 0px 20px;
-    // justify-self: center;
-    // align-self: center;
   }
+}
+// Contact Page
+.contact{
+  width: 90%;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background: rgba(255, 255, 255, 0.6);
+
+  h2{
+    text-align: center;
+    color: #10375c;
+    margin: 10px 0px;
+  }
+  p{
+    color: #10375c;
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    input{
+      border: none;
+      border-bottom: 1px solid rgb(204, 204, 204);
+      background-color: rgba(255, 255, 255, 0);
+      height: 30px;
+      margin: 5px 0px;
+      &:active{
+        border: none;
+      }
+    }
+    input[type='submit']{
+      width: 200px;
+      margin: 5px auto;
+      border: none;
+      background: #10375c;
+      border-radius: 5px;
+      color: #ffffff;
+      
+    }
+    textarea{
+      border: none;
+      border-bottom: 1px solid rgb(204, 204, 204);
+      background-color: rgba(255, 255, 255, 0);
+    }
+    input:focus, textarea:focus, select:focus{
+      outline: none;
+  }
+  }
+  
 }

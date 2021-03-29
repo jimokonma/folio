@@ -25,53 +25,29 @@
           </ul>
         </nav>
         <div class="contact">
+          <h2>Get in touch!</h2>
           <form method="POST" >
-        <label for="name">Subject</label>
-        <input type="text" name="subject" id="subject" >
-        <label for="email">Email</label>
-        <input type="text" name="" id="email" >
-        <label for="name">Message</label>
-        <textarea name="" id="message" cols="10" rows="8"></textarea>
-           <input type="button" value="Send" onclick="sendEmail()"/> 
-      </form>
+            <label for="name">Subject</label>
+            <input type="text" name="subject" id="subject" required>
+            <label for="email">Email</label>
+            <input type="text" name="" id="email" required/>
+            <label for="name">Message</label>
+            <textarea name="" id="message" cols="5" rows="4" required></textarea>
+            <input type="submit" value="Send" onclick="sendEmail()"/> 
+          </form>
         <p class="subtitle">Contact</p>
               <ul >
-                <li>
-                  <img src="./images/mail.svg" alt="email" />
-                  <p>Jim.okonma@gmail.com</p>
-                </li>
                 <li>
                   <img src="./images/phone.svg" alt="phone number" />
                   <p>+234 9034572737</p>
                 </li>
-              </ul>
+               </ul>
             </div>
-          </div>
+              </div>
         </div>
     
   </body>
   <script src=" https://smtpjs.com/v3/smtp.js"></script>
-  <script>
-
-    function sendEmail(){
-   let subject =   document.querySelector('#subject').value
-   let email =  document.querySelector('#email').value
-   let message =   document.querySelector('#message').value
-   console.log(`${subject} ${email} ${message}`);
-   
-      Email.send({
-        SecureToken : "c53de826-553e-4e88-adc2-b4494160fd3c",
-      To : 'jim.okonma@gmail.com',
-    From : email,
-    Subject : subject,
-    Body : message
-}).then(
-  message => alert(message)
-  
-  );
-  subject = ''
-  email = ''
-  message = ''
-    }
-  </script>
+  <script src="./js/app.js">
+   </script>
 </html>

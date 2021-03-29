@@ -16,9 +16,13 @@ ul {
   list-style: none;
 }
 
-a, label {
+a {
   color: #f3c623;
   text-decoration: none;
+}
+
+label {
+  color: #f1f1f1;
 }
 
 p {
@@ -50,12 +54,6 @@ p {
   background: none;
   color: #f3c623;
   border: 1px solid #f3c623;
-}
-
-.outlineBtn:hover {
-  color: #ffffff;
-  -webkit-box-shadow: inset 300px 0 0 0 #10375c;
-          box-shadow: inset 300px 0 0 0 #10375c;
 }
 
 .container {
@@ -99,26 +97,6 @@ nav .menu li:last-child {
   border-right: none;
 }
 
-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-form input {
-  border: none;
-  height: 30px;
-  margin: 5px 0px;
-}
-
-form textarea {
-  border: none;
-}
-
 footer {
   text-align: center;
   margin-top: 50px;
@@ -131,11 +109,22 @@ footer ul li p {
 .bigImg {
   width: 60%;
   margin: 0px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .bigImg img {
   width: 100%;
   max-width: 200px;
+  margin: 10px 0px;
 }
 
 .hero {
@@ -224,6 +213,15 @@ footer ul li p {
   line-height: 30px;
 }
 
+.about h5 {
+  font-size: 20px;
+  color: #999999;
+  font-style: italic;
+  margin-bottom: 10px;
+  line-height: 30px;
+  text-align: justify;
+}
+
 .my-image {
   width: 150px;
   height: 150px;
@@ -277,6 +275,9 @@ footer ul li p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -284,5 +285,66 @@ footer ul li p {
 .holder img {
   width: 100px;
   margin: 0px 20px;
+}
+
+.contact {
+  width: 90%;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.contact h2 {
+  text-align: center;
+  color: #10375c;
+  margin: 10px 0px;
+}
+
+.contact p {
+  color: #10375c;
+}
+
+.contact form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact form input {
+  border: none;
+  border-bottom: 1px solid #cccccc;
+  background-color: rgba(255, 255, 255, 0);
+  height: 30px;
+  margin: 5px 0px;
+}
+
+.contact form input:active {
+  border: none;
+}
+
+.contact form input[type='submit'] {
+  width: 200px;
+  margin: 5px auto;
+  border: none;
+  background: #10375c;
+  border-radius: 5px;
+  color: #ffffff;
+}
+
+.contact form textarea {
+  border: none;
+  border-bottom: 1px solid #cccccc;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.contact form input:focus, .contact form textarea:focus, .contact form select:focus {
+  outline: none;
 }
 /*# sourceMappingURL=index.css.map */
