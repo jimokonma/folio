@@ -8,13 +8,14 @@
 
 h1 {
   font-size: 4em;
+  font-weight: normal;
   color: white;
 }
 
 ul {
   list-style: none;
 }
-a {
+a,label {
   color: #f3c623;
   text-decoration: none;
 }
@@ -24,22 +25,31 @@ p {
   line-height: 20px;
 }
 .btn {
-  padding: 10px;
-  background-color: #f3c623;
-  color: #10375c;
+  padding: 10px 20px ;
+  text-align: center;
+  justify-items: center;
   border-radius: 3px;
+  background-color: #ffffff;
+  box-shadow: inset 0 0 0 0 #f3c623;
+  color: #10375c;
+  transition: ease-out .5s;
 }
 .btn:hover {
-  color: #0d2d4b;
-  background: #dbb014;
-  box-shadow: 0.2px 0.2px 5px rgb(44, 44, 44);
+  color: #10375c;
+  box-shadow: inset 300px 0 0 0 #f3c623;
 }
 .outlineBtn {
   background: none;
   color: #f3c623;
   border: 1px solid #f3c623;
 }
+.outlineBtn:hover {
+  color: #ffffff;
+  box-shadow: inset 300px 0 0 0 #10375c;
+
+}
 .container {
+  width: 100%;
   min-height: 100vh;
   background: #10375c;
   background-image: url("../images/heroimage.png");
@@ -47,29 +57,48 @@ p {
 }
 
 .wraper {
-  max-width: 1000px;
+  width: 90%;
+  max-width: 700px;
   margin: 0px auto;
-  padding: 1.5em;
+  padding-top: 1em ;
 }
 
-.menu {
-  position: relative;
-  max-width: 1080px;
-  width: 100%;
+nav{
+display: flex;
+padding: 20px 0px;
+  .menu{
+    width: 100%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-evenly;
+    .activeMenu{
+      color: white;
+    }
+    li{
+      
+      &:last-child{
+      border-right: none;
+
+      }
+    }
+    
+  }
+}
+
+form{
   display: flex;
-  justify-content: flex-end;
-  li:last-child {
-    margin-left: 100px;
+  flex-direction: column;
+  input{
+    border: none;
+    height: 30px;
+    margin: 5px 0px;
   }
+  textarea{
+    border: none;
 
-  li.menuItem a {
-    padding: 0.5em;
-  }
-
-  li.menuItem a:hover {
-    color: white;
   }
 }
+
 footer {
   text-align: center;
   margin-top: 50px;
@@ -82,9 +111,11 @@ footer {
   }
 }
 .bigImg {
-  width: 100%;
+  width: 60%;
+  margin: 0px auto;
   img {
     width: 100%;
+    max-width: 200px;
   }
 }
 // Home
@@ -92,6 +123,7 @@ footer {
   color: white;
   margin-top: 40px;
   display: flex;
+  align-items: center;
   flex-direction: column;
   .logo {
     width: 300px;
@@ -99,9 +131,12 @@ footer {
     margin: auto;
     background: url("../images/portfolio.svg");
     background-size: 100% 100%;
+    flex: 1/2;
   }
   .heroContent {
+    width: 100%;
     margin: 0px auto;
+    flex: 1/2;
     display: flex;
     flex-direction: column;
 
@@ -134,23 +169,25 @@ footer {
   left: 0;
 }
 .about {
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-}
-.profileImage {
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  .dp {
-    width: 150px;
-    height: 150px;
-    border-radius: 100%;
-    background: url("../images/dp.png");
-    background-size: cover;
-    border: #f3c623 2px solid;
+  h1{
+    color: #f3c623;
+    font-style: normal;
+  }
+  p{
+    color: black;
+    line-height: 30px;
+    
   }
 }
+
+  .my-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: url("../images/dp.png");
+    background-size:contain;
+    border: #f3c623 2px solid;
+  }
 .section {
   margin: 0px auto 10px;
 }
@@ -165,14 +202,14 @@ footer {
   background: #f1f1f1;
 }
 .skillCatigory {
-  margin-top: 0px;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
+  width: 80%;
+  margin: 5vh auto;
+  display: flex;
+  flex-wrap: wrap;
   .skillItem {
     width: 150px;
     text-align: center;
-    margin: 0px auto;
+    margin: 30px auto;
     color: #10375c;
 
     img {
@@ -183,42 +220,15 @@ footer {
 }
 // holder
 .holder {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  width: 80%;
+  margin: 0px auto;
+  display: flex;
+  flex-wrap: wrap;
 
   img {
     width: 100px;
-    justify-self: center;
-  }
-}
-@media (min-width: 600px) {
-  .hero {
-    width: 100%;
-    flex-direction: row;
-    margin-top: 150px;
-  }
-  .heroCalltoAction {
-    margin: 0px auto;
-  }
-  .btn {
-    padding: 10px 20px;
-    min-width: 100px;
-  }
-  //   About
-  .about {
-    margin-top: 100px;
-    display: flex;
-    flex-direction: row;
-  }
-  //   Portfolio
-  .skillCatigory {
-    margin-top: 10%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
-  }
-  .holder {
-    display: grid;
-    grid-template-columns: 1fr;
+    margin: 0px 20px;
+    // justify-self: center;
+    // align-self: center;
   }
 }
